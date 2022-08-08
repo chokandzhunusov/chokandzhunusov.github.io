@@ -35,22 +35,16 @@
 
             ]
 
-
-
-
             async function myFunction() {
                 window.speechSynthesis.speak(new SpeechSynthesisUtterance(myCards[0]));
                 i = 0
                 setInterval(function () {
-                    console.log('Beginning new interval',);
                     i += 1
                     window.speechSynthesis.speak(new SpeechSynthesisUtterance(myCards[i]));
                     if (i == myCards.length - 1) {
-                        console.log('Faced this case')
                         setTimeout(function () {
-                            console.log('Twosec passed',);
                             window.speechSynthesis.speak(new SpeechSynthesisUtterance(myCards[0]));
-                        }, 5000);
+                        }, 10000);
                         i = 0
                     }
                 }, 30000);
