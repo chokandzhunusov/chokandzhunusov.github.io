@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html>
-    <!-- <button id="click" onclick="myFunction()">Click</button> -->
-    <!-- <button type="button" class="btn btn-primary" onclick="myFunction()">Primary</button> -->
-
 
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,21 +14,55 @@
         <!-- End Bootstrap -->
 
         <script>
-            const cards = [
-                {
-                    'front': 'Blob Storage',
-                    'back': `- Widely used kind of storage, in small and large scale systems.`
-                },
-                {
-                    'front': 'Time Series Database',
-                    'back': `- Optimized for storing and analyzing time-indexed data. - Examples are InfluxDB, Prometheus and Graphite.`
-                }
-            ]
             const myCards = [
+
+                `Topic Hashing`,
+
+                `Consistent Hashing`,
+                `- Type of hashing that minimizes the number of keys that need to be remapped when a hash table get resized. - Often used by load balancers to distribute traffic to servers. - It minimizes the number of requests that get forwarded to diff. servers when new servers are added or when existing are down.`,
+
+                `Randezvoues Hashing`,
+                `- Type of hashing also called highest random weight hashing. - Allows for minimal re-distribution of mappings when a server down.`,
+
+
+
+                `Topic Key-Value Stores`,
+
+                `Key-Value Store`,
+                `- Flexible NoSQL DB that often used for caching and dynamic configuration.`,
+
+                `Redis`,
+                `- In-Memory key-value store. - Offer persistent storage options. - Typically used as a really fast, best effort caching solution. - Also used to implement rate limiting`,
+
+                `Etcd, ZooKeeper`,
+                `- Strongly consistent and highly available key-value stores. - Used store, implement perform leader election.`,
+
+
+                `Topic Specialized Storage Paradigms`,
+
                 'Blob Storage',
                 '- Widely used kind of storage, in small and large scale systems.',
+
                 'Time Series Database',
                 `- Optimized for storing and analyzing time-indexed data. - Examples are InfluxDB, Prometheus and Graphite.`
+
+                    `Graph Database`,
+                `- Stores data following graph data model. - Data entries in it can have explicitly defined relationships. - Takes advantage if their underlying graph structure to perform complex queries on deeply connected data very fast. - Are preferred dealing with systems where data points naturally form a graph and have multiple level of relationships(social networks)`,
+
+                `Cypher`,
+                `- Graph Query Language. - Originally developed for Neo4j graph DB. - Queries are simple than their SQL conuterparts.`,
+
+                `Spatial DB`,
+                `- Optimized to store data like locations on map. - Relies on spatial indexes - quadtrees to quickly perform query to find all locations in the region.`,
+
+
+                `Topic Replication`,
+
+                `Replication`,
+                `- Act of duplicating the data from one DB server to other. - Used to increase redundancy of system and tolerate regional failures. - Can be used to move data closer to client, thus decreasing latency of accessing special data.`,
+
+                `Sharding`,
+                `- AKA Data Partitioning. - Act of splitting DB into 2+ pieces called - shards. - Typically done to increase the throughput of DB. - Popular strategies are: - Sharding based on client's region. - Sharding based on type to be stored(payments/user data/...) - Sharding based on hash of a column(only for structured data)`,
 
             ]
 
