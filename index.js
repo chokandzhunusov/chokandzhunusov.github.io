@@ -52,3 +52,7 @@ async function playQuestions() {
         await wait(questions[i]['playAfter'] || defaultTimeInterval);
     }
 }
+
+async function test() {
+    alert('Works');
+}
