@@ -11,79 +11,16 @@
 
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <script src="./cards.js"></script>
+        <script src="./index.js"></script>
         <!-- End Bootstrap -->
-
-        <script>
-            const myCards = [
-
-                `Topic Hashing`,
-
-                `Consistent Hashing`,
-                `- Type of hashing that minimizes the number of keys that need to be remapped when a hash table get resized. - Often used by load balancers to distribute traffic to servers. - It minimizes the number of requests that get forwarded to diff. servers when new servers are added or when existing are down.`,
-
-                `Randezvoues Hashing`,
-                `- Type of hashing also called highest random weight hashing. - Allows for minimal re-distribution of mappings when a server down.`,
-
-
-
-                `Topic Key-Value Stores`,
-
-                `Key-Value Store`,
-                `- Flexible NoSQL DB that often used for caching and dynamic configuration.`,
-
-                `Redis`,
-                `- In-Memory key-value store. - Offer persistent storage options. - Typically used as a really fast, best effort caching solution. - Also used to implement rate limiting`,
-
-                `Etcd, ZooKeeper`,
-                `- Strongly consistent and highly available key-value stores. - Used store, implement perform leader election.`,
-
-
-                `Topic Specialized Storage Paradigms`,
-
-                'Blob Storage',
-                '- Widely used kind of storage, in small and large scale systems.',
-
-                'Time Series Database',
-                `- Optimized for storing and analyzing time-indexed data. - Examples are InfluxDB, Prometheus and Graphite.`,
-
-                `Graph Database`,
-                `- Stores data following graph data model. - Data entries in it can have explicitly defined relationships. - Takes advantage if their underlying graph structure to perform complex queries on deeply connected data very fast. - Are preferred dealing with systems where data points naturally form a graph and have multiple level of relationships(social networks)`,
-
-                `Cypher`,
-                `- Graph Query Language. - Originally developed for Neo4j graph DB. - Queries are simple than their SQL conuterparts.`,
-
-                `Spatial DB`,
-                `- Optimized to store data like locations on map. - Relies on spatial indexes - quadtrees to quickly perform query to find all locations in the region.`,
-
-
-                `Topic Replication`,
-
-                `Replication`,
-                `- Act of duplicating the data from one DB server to other. - Used to increase redundancy of system and tolerate regional failures. - Can be used to move data closer to client, thus decreasing latency of accessing special data.`,
-
-                `Sharding`,
-                `- AKA Data Partitioning. - Act of splitting DB into 2+ pieces called - shards. - Typically done to increase the throughput of DB. - Popular strategies are: - Sharding based on client's region. - Sharding based on type to be stored(payments/user data/...) - Sharding based on hash of a column(only for structured data)`,
-
-            ]
-
-            async function myFunction() {
-                window.speechSynthesis.speak(new SpeechSynthesisUtterance(myCards[0]));
-                i = 0
-                setInterval(function () {
-                    i += 1
-                    window.speechSynthesis.speak(new SpeechSynthesisUtterance(myCards[i]));
-                    if (i == myCards.length - 1) {
-                        setTimeout(function () {
-                            window.speechSynthesis.speak(new SpeechSynthesisUtterance(myCards[0]));
-                        }, 10000);
-                        i = 0
-                    }
-                }, 30000);
-            }
-        </script>
     </head>
 
     <body>
+        <!-- <div id="rate-control">
+          <label for="rate">Rate:</label>
+          <input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
+        </div> -->
         <div class="container text-center">
             <div class="row align-items-center " style="min-height: 100vh">
                 <div class="col text-center">
